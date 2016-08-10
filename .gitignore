@@ -1,47 +1,26 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+#Autosave files
+*~
 
-# Folder config file
-Desktop.ini
+# Build/test output
+obj
+bin
+test-results
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# VS sometimes writes these for no apparent reason
+_UpgradeReport_Files
+UpgradeLog.*
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# Per-user data
+*.DS_Store
+*.sln.cache
+*.suo
+*.userprefs
+*.usertasks
+*.user
 
-# Windows shortcuts
-*.lnk
+# ReSharper
+*_Resharper.*
+*.Resharper
 
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# dotCover
+*.dotCover
