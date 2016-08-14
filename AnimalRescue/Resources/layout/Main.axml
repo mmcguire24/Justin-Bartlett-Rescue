@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ccccff">
+    android:background="#08146B">
     <Button
         android:id="@+id/myButton"
         android:layout_width="match_parent"
@@ -19,9 +19,24 @@
         android:layout_width="350dp"
         android:layout_height="350dp"
         android:background="#c11cff"
+        android:visibility="gone"
         android:layout_centerInParent="true"
         app:mainColor="#0ff770"
         app:secondaryColor="#00ff00" />
+    <RelativeLayout
+    android:id="@+id/loadingPanel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    android:layout_centerVertical = "True"
+    android:gravity="center" >
+
+    <ProgressBar
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerVertical = "True"
+        android:indeterminate="true" />
+	</RelativeLayout>
     <TextView
     	android:id="@+id/mainText"
         android:layout_width="match_parent"
@@ -31,7 +46,7 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="#00112233"
+        android:background="#394288"
         android:id="@+id/feedList">
         <ListView
             android:minWidth="25px"

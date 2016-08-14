@@ -23,11 +23,14 @@ namespace DogData
 		{
 			this.bactivity = inActivity;
 			animalType = animal;
+
 		}
 
 		public Activity bactivity;
+		public SingleDog selectedDog = new SingleDog();
 		public string animalType;
 		private Petstuff pet;
+		bool inspectDog = false;
 
 		public List <Dog> dogList = new List<Dog>();
 
@@ -63,18 +66,32 @@ namespace DogData
 			//this.bactivity.SetContentView (Resource.Layout.Main);
 			//return;
 			ListView mainList = (ListView)this.bactivity.FindViewById (Resource.Id.mainlistview);
+			TextView mainText = (TextView)this.bactivity.FindViewById (Resource.Id.mainText);
+
 			mainList.Adapter = new CustomListAdapter (this.bactivity, UidogList);
 			mainList.SetBackgroundColor (Color.BurlyWood);
-			AnimatedCircleLoadingView loading;
+			mainList.SetBackgroundColor (Color.CadetBlue);
+			mainList.ItemClick += (object sender, AdapterView.ItemClickEventArgs e) => 
+			{
+				selectedDog.clear();
+				selectedDog.setDog(UidogList[e.Position]);
+				mainText.Text = selectedDog.getDog().Name;
+				mainList.Context.StartActivity(typeof(SingleDogActivity));
+			};
 
-			loading = this.bactivity.FindViewById<AnimatedCircleLoadingView> (Resource.Id.circle_loading_view);
-			TextView mainText = (TextView)this.bactivity.FindViewById (Resource.Id.mainText);
-			mainText.Text = UidogList [0].Name;
-			loading.Visibility = Android.Views.ViewStates.Gone;
+
+
+			var loadgif = this.bactivity.FindViewById<RelativeLayout> (Resource.Id.loadingPanel);
+			//TextView mainText = (TextView)this.bactivity.FindViewById (Resource.Id.mainText);
+			//mainText.Text = UidogList [0].Name;
+			loadgif.Visibility = Android.Views.ViewStates.Gone;
 			mainList.Visibility = Android.Views.ViewStates.Visible;
 
 
 		}
+
+
+
 	}
 }
 

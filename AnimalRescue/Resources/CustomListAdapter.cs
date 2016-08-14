@@ -60,6 +60,8 @@ namespace Marcus.ListView.CustomListAdapter
 
 			return view;
 		}
+
+
 	}
 }
 

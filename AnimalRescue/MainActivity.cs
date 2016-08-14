@@ -13,6 +13,11 @@ using SecondChanceResuce;
 using System.Threading;
 using AnimatedLoadingViews;
 using AnimalRescue;
+using Android.Transitions;
+using System.Security.Cryptography;
+using Android.Content;
+using Android.Views.Animations;
+using Android.Animation;
 
 namespace SecondChanceRescue
 {
@@ -28,8 +33,10 @@ namespace SecondChanceRescue
 			
 			base.OnCreate (savedInstanceState);
 
+			SingleDog mainDog = new SingleDog ();
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
+			//var slide = TransitionInflater.From (this).InflateTransition (Resource.Transition.explode);
 
 			LV = FindViewById<ListView> (Resource.Id.mainlistview);
 			LV.SetBackgroundColor (Color.Wheat);
@@ -40,7 +47,15 @@ namespace SecondChanceRescue
 			button.Click += delegate {
 
 				loading = FindViewById<AnimatedCircleLoadingView> (Resource.Id.circle_loading_view);
+				var loadgif = FindViewById<RelativeLayout> (Resource.Id.loadingPanel);
+				loadgif.Visibility = Android.Views.ViewStates.Visible;
+				//Console.Out.WriteLine(loading.Animation);
+				try{
+					loading.ResetLoading();
+				}
+				catch{}
 				loading.StartIndeterminate();
+				//loading.StopOk();
 				//Petstuff pet = new Petstuff("dog");
 				DataApi dogApi = new DataApi(this,"dog");
 				Dog initial = new Dog();
@@ -48,7 +63,11 @@ namespace SecondChanceRescue
 				//ThreadPool.QueueUserWorkItem (o => dogApi = new DataApi(this,"dog"));
 				//doglist = dogApi.getData();
 				ThreadPool.QueueUserWorkItem (o => doglist = dogApi.getData());
-				//LV.Visibility = Android.Views.ViewStates.Visible;
+				//loading.StopFailure();
+
+				LV.Visibility = Android.Views.ViewStates.Gone;
+				loading.Visibility = Android.Views.ViewStates.Gone;
+				//loadgif.Visibility = Android.v
 				//TODO: reset to loading screen
 
 
@@ -69,12 +88,21 @@ namespace SecondChanceRescue
 				//ThreadPool.QueueUserWorkItem (o => dogApi = new DataApi(this,"dog"));
 
 
-				ThreadPool.QueueUserWorkItem (o => dogApi.getData());
+				//ThreadPool.QueueUserWorkItem (o => dogApi.getData());
 
+				//OverridePendingTransition(Resource.Animation., Resource.Animation.abc_popup_exit);
 
 
 			};
 		}
+		private void setupWindowAnimations() {
+			//var slide = TransitionInflater.From (this).InflateTransition (Resource.Transition.explode);
+			Explode slide = new Explode();
+			slide.SetDuration (10000);
+			this.Window.ExitTransition.SetDuration (2000);
+			this.Window.ExitTransition = slide;
+		}
+			
 	}
 }
 
