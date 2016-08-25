@@ -1477,8 +1477,8 @@ namespace AnimalRescue
 			// aapt resource value: 0x7f0d0051
 			public const int Title = 2131558481;
 			
-			// aapt resource value: 0x7f0d005a
-			public const int action0 = 2131558490;
+			// aapt resource value: 0x7f0d005b
+			public const int action0 = 2131558491;
 			
 			// aapt resource value: 0x7f0d0041
 			public const int action_bar = 2131558465;
@@ -1504,8 +1504,8 @@ namespace AnimalRescue
 			// aapt resource value: 0x7f0d0042
 			public const int action_context_bar = 2131558466;
 			
-			// aapt resource value: 0x7f0d005e
-			public const int action_divider = 2131558494;
+			// aapt resource value: 0x7f0d005f
+			public const int action_divider = 2131558495;
 			
 			// aapt resource value: 0x7f0d0002
 			public const int action_menu_divider = 2131558402;
@@ -1537,8 +1537,8 @@ namespace AnimalRescue
 			// aapt resource value: 0x7f0d002b
 			public const int buttonPanel = 2131558443;
 			
-			// aapt resource value: 0x7f0d005b
-			public const int cancel_action = 2131558491;
+			// aapt resource value: 0x7f0d005c
+			public const int cancel_action = 2131558492;
 			
 			// aapt resource value: 0x7f0d0054
 			public const int catButton = 2131558484;
@@ -1546,8 +1546,8 @@ namespace AnimalRescue
 			// aapt resource value: 0x7f0d0039
 			public const int checkbox = 2131558457;
 			
-			// aapt resource value: 0x7f0d0061
-			public const int chronometer = 2131558497;
+			// aapt resource value: 0x7f0d0062
+			public const int chronometer = 2131558498;
 			
 			// aapt resource value: 0x7f0d0055
 			public const int circle_loading_view = 2131558485;
@@ -1573,14 +1573,14 @@ namespace AnimalRescue
 			// aapt resource value: 0x7f0d000c
 			public const int disableHome = 2131558412;
 			
-			// aapt resource value: 0x7f0d0069
-			public const int dogDescription = 2131558505;
-			
-			// aapt resource value: 0x7f0d0067
-			public const int dogName = 2131558503;
+			// aapt resource value: 0x7f0d006a
+			public const int dogDescription = 2131558506;
 			
 			// aapt resource value: 0x7f0d0068
-			public const int dogPhoto = 2131558504;
+			public const int dogName = 2131558504;
+			
+			// aapt resource value: 0x7f0d0069
+			public const int dogPhoto = 2131558505;
 			
 			// aapt resource value: 0x7f0d0043
 			public const int edit_query = 2131558467;
@@ -1588,8 +1588,8 @@ namespace AnimalRescue
 			// aapt resource value: 0x7f0d001a
 			public const int end = 2131558426;
 			
-			// aapt resource value: 0x7f0d0066
-			public const int end_padder = 2131558502;
+			// aapt resource value: 0x7f0d0067
+			public const int end_padder = 2131558503;
 			
 			// aapt resource value: 0x7f0d0025
 			public const int expand_activities_button = 2131558437;
@@ -1597,8 +1597,11 @@ namespace AnimalRescue
 			// aapt resource value: 0x7f0d0038
 			public const int expanded_menu = 2131558456;
 			
-			// aapt resource value: 0x7f0d0058
-			public const int feedList = 2131558488;
+			// aapt resource value: 0x7f0d0059
+			public const int frameSplitter = 2131558489;
+			
+			// aapt resource value: 0x7f0d005a
+			public const int frameSplitter2 = 2131558490;
 			
 			// aapt resource value: 0x7f0d0004
 			public const int home = 2131558404;
@@ -1615,14 +1618,14 @@ namespace AnimalRescue
 			// aapt resource value: 0x7f0d0026
 			public const int image = 2131558438;
 			
-			// aapt resource value: 0x7f0d0065
-			public const int info = 2131558501;
+			// aapt resource value: 0x7f0d0066
+			public const int info = 2131558502;
 			
-			// aapt resource value: 0x7f0d005f
-			public const int line1 = 2131558495;
+			// aapt resource value: 0x7f0d0060
+			public const int line1 = 2131558496;
 			
-			// aapt resource value: 0x7f0d0063
-			public const int line3 = 2131558499;
+			// aapt resource value: 0x7f0d0064
+			public const int line3 = 2131558500;
 			
 			// aapt resource value: 0x7f0d0009
 			public const int listMode = 2131558409;
@@ -1636,11 +1639,11 @@ namespace AnimalRescue
 			// aapt resource value: 0x7f0d0057
 			public const int mainText = 2131558487;
 			
-			// aapt resource value: 0x7f0d0059
-			public const int mainlistview = 2131558489;
+			// aapt resource value: 0x7f0d0058
+			public const int mainlistview = 2131558488;
 			
-			// aapt resource value: 0x7f0d005d
-			public const int media_actions = 2131558493;
+			// aapt resource value: 0x7f0d005e
+			public const int media_actions = 2131558494;
 			
 			// aapt resource value: 0x7f0d001b
 			public const int middle = 2131558427;
@@ -1744,8 +1747,8 @@ namespace AnimalRescue
 			// aapt resource value: 0x7f0d0018
 			public const int src_over = 2131558424;
 			
-			// aapt resource value: 0x7f0d005c
-			public const int status_bar_latest_event_content = 2131558492;
+			// aapt resource value: 0x7f0d005d
+			public const int status_bar_latest_event_content = 2131558493;
 			
 			// aapt resource value: 0x7f0d004c
 			public const int submit_area = 2131558476;
@@ -1753,17 +1756,17 @@ namespace AnimalRescue
 			// aapt resource value: 0x7f0d000b
 			public const int tabMode = 2131558411;
 			
-			// aapt resource value: 0x7f0d0064
-			public const int text = 2131558500;
+			// aapt resource value: 0x7f0d0065
+			public const int text = 2131558501;
 			
-			// aapt resource value: 0x7f0d0062
-			public const int text2 = 2131558498;
+			// aapt resource value: 0x7f0d0063
+			public const int text2 = 2131558499;
 			
 			// aapt resource value: 0x7f0d0034
 			public const int textSpacerNoButtons = 2131558452;
 			
-			// aapt resource value: 0x7f0d0060
-			public const int time = 2131558496;
+			// aapt resource value: 0x7f0d0061
+			public const int time = 2131558497;
 			
 			// aapt resource value: 0x7f0d002a
 			public const int title = 2131558442;
@@ -1807,9 +1810,6 @@ namespace AnimalRescue
 			
 			// aapt resource value: 0x7f0b0000
 			public const int abc_max_action_buttons = 2131427328;
-			
-			// aapt resource value: 0x7f0b0005
-			public const int anim_duration_long = 2131427333;
 			
 			// aapt resource value: 0x7f0b0003
 			public const int cancel_button_image_alpha = 2131427331;

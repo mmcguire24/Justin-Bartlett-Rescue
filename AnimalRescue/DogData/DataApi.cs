@@ -13,6 +13,7 @@ using Android.Graphics;
 using SecondChanceResuce;
 using AnimatedLoadingViews;
 using AnimalRescue;
+using Java.Security;
 
 namespace DogData
 {
@@ -30,7 +31,6 @@ namespace DogData
 		public SingleDog selectedDog = new SingleDog();
 		public string animalType;
 		private Petstuff pet;
-		bool inspectDog = false;
 
 		public List <Dog> dogList = new List<Dog>();
 
@@ -42,7 +42,7 @@ namespace DogData
 			List <Dog> dogList = new List<Dog>();
 			for(int i = 0; i < 30/*pet.picUrls.Count*/; i++)
 			{
-				Dog tempDoggy = new Dog(pet.names[i],pet.breeds[i],pet.picUrls[i]);
+				Dog tempDoggy = new Dog(pet.names[i],pet.breeds[i],pet.picUrls[i], pet.ids[i]);
 				dogList.Add(tempDoggy);
 			}
 
@@ -67,6 +67,8 @@ namespace DogData
 			//return;
 			ListView mainList = (ListView)this.bactivity.FindViewById (Resource.Id.mainlistview);
 			TextView mainText = (TextView)this.bactivity.FindViewById (Resource.Id.mainText);
+			FrameLayout frameSplitter2 = (FrameLayout)this.bactivity.FindViewById (Resource.Id.frameSplitter2);
+			FrameLayout frameSplitter = (FrameLayout)this.bactivity.FindViewById (Resource.Id.frameSplitter);
 
 			mainList.Adapter = new CustomListAdapter (this.bactivity, UidogList);
 			mainList.SetBackgroundColor (Color.BurlyWood);
@@ -85,6 +87,8 @@ namespace DogData
 			//TextView mainText = (TextView)this.bactivity.FindViewById (Resource.Id.mainText);
 			//mainText.Text = UidogList [0].Name;
 			loadgif.Visibility = Android.Views.ViewStates.Gone;
+			frameSplitter2.Visibility = Android.Views.ViewStates.Visible;
+			frameSplitter.Visibility = Android.Views.ViewStates.Gone;
 			mainList.Visibility = Android.Views.ViewStates.Visible;
 
 

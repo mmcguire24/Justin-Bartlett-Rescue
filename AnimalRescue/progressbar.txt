@@ -1,0 +1,14 @@
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_centerVertical="True"
+        android:layout_weight = "2"
+        android:gravity="center">
+        <ProgressBar
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerVertical="True"
+            android:indeterminate="true" />
+    </RelativeLayout>

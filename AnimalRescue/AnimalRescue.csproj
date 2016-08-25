@@ -95,6 +95,7 @@
     <Compile Include="DogData\SingleDog.cs" />
     <Compile Include="Resources\CustomListAdapter.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Scraper\SingleDogScraper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -122,7 +123,6 @@
     <AndroidResource Include="Resources\transition\slide_and_changebounds_sequential.xml" />
     <AndroidResource Include="Resources\transition\slide_and_changebounds_sequential_with_interpolators.xml" />
     <AndroidResource Include="Resources\transition\slide_from_bottom.xml" />
-    <AndroidResource Include="Resources\values\Ints.xml" />
     <AndroidResource Include="Resources\layout\SingleDog.axml" />
   </ItemGroup>
   <ItemGroup>

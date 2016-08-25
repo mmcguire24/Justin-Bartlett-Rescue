@@ -18,6 +18,15 @@ namespace DogData
 			picUrl = imgUrl;
 		}
 
+		public Dog(string sname, string sbreed, string imgUrl, string id)
+		{
+			Console.WriteLine ("Creating Dog");
+			Breed = sbreed;
+			Name = sname;
+			picUrl = imgUrl;
+			Id = id;
+		}
+
 		public Dog( Dog copyDog)
 		{
 			Name = copyDog.Name;
@@ -26,7 +35,7 @@ namespace DogData
 
 			Species = copyDog.Species;
 
-				Breed = copyDog.Breed;
+			Breed = copyDog.Breed;
 
 			sex = copyDog.sex;
 
@@ -119,6 +128,8 @@ namespace DogData
 		public string Microchipped { get; set;}
 
 		public string Description { get; set;}
+
+		public string Color { get; set;}
 
 		private string picUrl { get; set;}
 

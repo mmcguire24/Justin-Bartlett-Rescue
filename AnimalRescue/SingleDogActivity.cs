@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Transitions;
 using DogData;
+using Square.Picasso;
 
 namespace AnimalRescue
 {
@@ -25,7 +26,19 @@ namespace AnimalRescue
 			SingleDog mainDogPasser = new SingleDog();
 			Dog mainDog = mainDogPasser.getDog ();
 			TextView dogName = FindViewById<TextView> (Resource.Id.dogName);
-			dogName.Text = mainDog.Name;
+			TextView dogDescription = FindViewById<TextView> (Resource.Id.dogDescription);
+			dogName.Text = mainDog.Id;
+			dogName.Visibility = ViewStates.Visible;
+			dogDescription.Text = mainDog.getUrl();
+			dogDescription.Visibility = ViewStates.Visible;
+
+			ImageView thumbnail = FindViewById<ImageView>(Resource.Id.dogPhoto);
+
+
+			SingleDogScraper dogDetails = new SingleDogScraper (mainDog.Id);
+			//mainDog.Color = dogDetails
+
+			Picasso.With(this.BaseContext).Load (dogDetails.link).Into (thumbnail);
 
 
 			// Create your application here

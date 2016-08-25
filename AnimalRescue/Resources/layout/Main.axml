@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#08146B">
+    android:background="#f3f3f3">
     <Button
         android:id="@+id/myButton"
         android:layout_width="match_parent"
@@ -24,37 +24,52 @@
         app:mainColor="#0ff770"
         app:secondaryColor="#00ff00" />
     <RelativeLayout
-    android:id="@+id/loadingPanel"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:visibility="gone"
-    android:layout_centerVertical = "True"
-    android:gravity="center" >
-
-    <ProgressBar
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_centerVertical = "True"
-        android:indeterminate="true" />
-	</RelativeLayout>
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_centerVertical="True"
+        android:layout_weight = "9"
+        android:gravity="center">
+        <ProgressBar
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerVertical="True"
+            android:indeterminate="true" />
+    </RelativeLayout>
     <TextView
-    	android:id="@+id/mainText"
+        android:id="@+id/mainText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Press to See Cats" />
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:cacheColorHint="#00000000"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:id="@+id/mainlistview" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/frameSplitter"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/frameSplitter2"
+        android:visibility="gone"
+        android:layout_height="0dp"
+        android:layout_weight="0" />
+<!-- content fixated to the bottom of the screen -->
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#394288"
-        android:id="@+id/feedList">
-        <ListView
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:cacheColorHint="#00000000"
-            android:visibility = "gone"
-            android:id="@+id/mainlistview" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="trjsdfkjsue" />
     </LinearLayout>
 </LinearLayout>

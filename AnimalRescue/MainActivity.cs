@@ -32,7 +32,6 @@ namespace SecondChanceRescue
 		{
 			
 			base.OnCreate (savedInstanceState);
-
 			SingleDog mainDog = new SingleDog ();
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
@@ -74,6 +73,7 @@ namespace SecondChanceRescue
 
 
 
+
 			};
 
 			Button catbutton = FindViewById<Button> (Resource.Id.catButton);
@@ -84,6 +84,7 @@ namespace SecondChanceRescue
 
 				//Petstuff pet = new Petstuff("dog");
 				DataApi dogApi = new DataApi(this,"cat");
+				SingleDogScraper dogScraper = new SingleDogScraper("9591412");
 
 				//ThreadPool.QueueUserWorkItem (o => dogApi = new DataApi(this,"dog"));
 
@@ -96,11 +97,12 @@ namespace SecondChanceRescue
 			};
 		}
 		private void setupWindowAnimations() {
-			//var slide = TransitionInflater.From (this).InflateTransition (Resource.Transition.explode);
-			Explode slide = new Explode();
-			slide.SetDuration (10000);
-			this.Window.ExitTransition.SetDuration (2000);
+			var slide = TransitionInflater.From (this).InflateTransition (Resource.Transition.slide_and_changebounds);
+			//Explode slide = new Explode();
+			//slide.SetDuration (10000);
+			//this.Window.ExitTransition.SetDuration (2000);
 			this.Window.ExitTransition = slide;
+			//this.Window.ExitTransition.
 		}
 			
 	}

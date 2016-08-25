@@ -7,6 +7,10 @@ using DogData;
 using System.Net;
 using System.IO;
 using Android.Media;
+using Java.Security;
+using System.Threading;
+using Javax.Xml.Namespace;
+using Android.App;
 
 namespace Scraper
 {
@@ -17,6 +21,8 @@ namespace Scraper
 		public List <string> picUrls = new List<string>();
 		public List <string> names = new List<string>();
 		public List <string> breeds = new List<string>();
+		public List <string> ids = new List<string>();
+
 		string imgSrc { get; set;}
 
 		public Petstuff (string animal)
@@ -44,7 +50,7 @@ namespace Scraper
 		public async Task GetMainList(string animal)
 		{
 			HttpClient mainListClient = new HttpClient();
-			string ListUri =("http://www.asecondchancerescue.org/animals/list?Species=");
+			string ListUri =("http://www.justinbartlettanimalrescue.org/animals/list?Species=");
 			string dogListUri = ListUri + animal;
 
 
@@ -103,9 +109,12 @@ namespace Scraper
 					var tableData = tableRow.ChildNodes [7];
 					var nameData = tableRow.ChildNodes [1];
 					var link = tableData.ChildNodes [0];
+					Console.WriteLine (link);
 					var breedData = tableRow.ChildNodes [3];
 					string breed = breedData.InnerText;
 					string name = nameData.InnerText;
+					string id = nameData.InnerHtml;
+					id = FindIdFromHtml (id);
 					Console.WriteLine (name);
 					string slink = nameData.ChildNodes [1].Attributes [0].Value;
 
@@ -120,6 +129,7 @@ namespace Scraper
 					//name = name.Remove ((name.Length - 7), 7);
 					//name = name.Remove (0, 7);
 
+					ids.Add (id);
 					picUrls.Add (imgSrc);
 					names.Add (name);
 					breeds.Add (breed);
@@ -138,6 +148,21 @@ namespace Scraper
 
 
 
+		}
+
+		private string FindIdFromHtml(string id)
+		{
+			int count = 0;
+			string res = "";
+			foreach (char letter in id) {
+				if (count == 3 && letter != (char)39) {
+					res += letter;
+				}
+				if (letter == '=' || letter == (char)39) {
+					count += 1;
+				}
+			}
+			return res;
 		}
 	}
 }
